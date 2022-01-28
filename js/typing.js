@@ -16,7 +16,7 @@ function loadParagraph() {
     typingText.innerHTML = "";
     let res = "";
     for(let i = 0; i < 4; i++){
-        fetch("http://api.quotable.io/random").then(response => response.json()).then(result => {
+        fetch("https://api.quotable.io/random").then(response => response.json()).then(result => {
             result.content.split("").forEach(char => {
                 let span = `<span>${char}</span>`
                 typingText.innerHTML += span;
